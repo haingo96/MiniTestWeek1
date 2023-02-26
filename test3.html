@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <input type="text" id="inputNumber" value="0">
+    <button type="button" id="up">Up</button>
+    <button type="button" id="down">Down</button>
+</form>
+
+<script>
+    let inputNumber = parseInt(document.getElementById('inputNumber').value)
+
+    let upButton = document.getElementById('up')
+    upButton.addEventListener('click', doUp)
+    function doUp(){
+        inputNumber = inputNumber + 2
+        document.getElementById('inputNumber').value = inputNumber
+    }
+
+    let downButton = document.getElementById('down')
+    downButton.addEventListener('click', doDown)
+    function doDown(){
+        inputNumber = inputNumber - 2
+        document.getElementById('inputNumber').value = inputNumber
+    }
+
+</script>
+</body>
+</html>

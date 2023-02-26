@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <input type="number" id="firstNumber">
+    <input type="number" id="secondNumber">
+    <br><br>
+    <button type="button" id="add">+</button>
+    <button type="button" id="sub">-</button>
+    <button type="button" id="mul">*</button>
+    <button type="button" id="div">/</button>
+    <br>
+    <p id="result"></p>
+</form>
+
+<script>
+    let firstNumber = document.getElementById('firstNumber')
+    let firstNumberValue
+    firstNumber.addEventListener('change', getFirstNumber)
+    function getFirstNumber(){
+        firstNumberValue = parseInt(firstNumber.value)
+    }
+    let secondNumber = document.getElementById('secondNumber')
+    let secondNumberValue
+    secondNumber.addEventListener('change', getSecondNumber)
+    function getSecondNumber(){
+        secondNumberValue = parseInt(secondNumber.value)
+    }
+
+    let add = document.getElementById('add')
+    add.addEventListener('click', doAdd)
+    function doAdd(){
+        document.getElementById('result').innerHTML = firstNumberValue + secondNumberValue
+    }
+
+    let mul = document.getElementById('mul')
+    mul.addEventListener('click', doMul)
+    function doMul(){
+        document.getElementById('result').innerHTML = firstNumberValue * secondNumberValue
+    }
+
+    let sub = document.getElementById('sub')
+    sub.addEventListener('click', doSub)
+    function doSub(){
+        document.getElementById('result').innerHTML = firstNumberValue - secondNumberValue
+    }
+
+    let div = document.getElementById('div')
+    div.addEventListener('click', doDiv)
+    function doDiv(){
+        document.getElementById('result').innerHTML = firstNumberValue / secondNumberValue
+    }
+
+</script>
+
+</body>
+</html>
